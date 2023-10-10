@@ -2,7 +2,8 @@ name: Test Workflow
 
 # Controls when the workflow will run
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
   build:
@@ -10,7 +11,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9"]
-    
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
