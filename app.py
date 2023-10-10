@@ -1,17 +1,17 @@
+# importing function for calculations
+from basic_calculator_function import basic_calculator
+
 from flask import Flask, request, jsonify, render_template
 
 # Create the app object
 app = Flask(__name__)
-
-
-# importing function for calculations
-from basic_calculator_function import basic_calculator
 
 # Define calculator
 @app.route('/')
 def home():
     return render_template('index.html')
 
+# doing calculations
 @app.route('/predict',methods=['POST'])
 def predict():
 
@@ -26,3 +26,5 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+# End-of-file (EOF)

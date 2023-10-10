@@ -1,5 +1,5 @@
+"""defining calculator operations"""
 def basic_calculator(a,b,operation):
-#defining calculator operations
     if a.isnumeric() & b.isnumeric():
         a=float(a)
         b=float(b)
@@ -14,5 +14,5 @@ def basic_calculator(a,b,operation):
         else:
             result = "Operations supported: add, subtract, divide, multiple only"
     else:
-         result = "Please enter a valid number for a & b"
+        result = "Please enter a valid number for a & b"
     return result
